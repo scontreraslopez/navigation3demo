@@ -55,24 +55,24 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
     //Navigation 3
-    implementation("androidx.navigation3:navigation3-runtime:1.0.1")
-    implementation("androidx.navigation3:navigation3-ui:1.0.1")
+    implementation(libs.androidx.navigation3.runtime)
+    implementation(libs.androidx.navigation3.ui)
 
     //Lifecycle (ViewModel)
     val lifecycle_version = "2.10.0"
 
     // ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
     // ViewModel utilities for Compose
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version")
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
     // Lifecycle utilities for Compose
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:$lifecycle_version")
+    implementation(libs.androidx.lifecycle.runtime.compose)
 
     // Saved state module for ViewModel. Esto normalmente no lo usamos.
-    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version")
+    implementation(libs.androidx.lifecycle.viewmodel.savedstate)
 
     // ViewModel integration with Navigation3. Esto es para viewmodels scopeados a la navegación, pero no lo vamos a usar en este ejemplo.
-    implementation("androidx.lifecycle:lifecycle-viewmodel-navigation3:2.11.0-alpha01")
+    implementation(libs.androidx.lifecycle.viewmodel.navigation3)
 
     // KotlinX Serialization. No estoy seguro de si hará falta. //TODO: Review
 
