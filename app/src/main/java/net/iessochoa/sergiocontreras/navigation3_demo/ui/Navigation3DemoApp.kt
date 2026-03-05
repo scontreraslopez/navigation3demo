@@ -53,14 +53,15 @@ fun Navigation3DemoApp() {
             )
         }
     ) { innerPadding ->
+        //TODO: Ver que pasa con el innerPadding o los margenes
         NavDisplay(
             backStack = backStack,
-            modifier = Modifier.padding(innerPadding),
             entryProvider = appNavGraph(
                 onNavigateToTrain   = { backStack.add(TrainScreenDestination) },
                 onNavigateToHistory = { backStack.add(HistoryScreenDestination) },
-                onNavigateBack      = { backStack.removeLastOrNull() }
-            )
+                onNavigateBack      = { backStack.removeLastOrNull() },
+                modifier = Modifier.padding(innerPadding)
+                )
         )
     }
 }
