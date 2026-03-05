@@ -19,6 +19,17 @@ import net.iessochoa.sergiocontreras.navigation3_demo.ui.theme.Navigation3demoTh
 @Composable
 fun Navigation3DemoApp() {
     val backStack = remember { mutableStateListOf<AppDestination>(MenuScreenDestination) }
+    val currentDestination = backStack.lastOrNull()
+
+    val currentScreenTitle = when (currentDestination) {
+        is MenuScreenDestination    -> "Menu"
+        is TrainScreenDestination   -> "Entrenar"
+        is HistoryScreenDestination -> "Historial"
+        null -> "Pre-Flop Trainer"
+    }
+
+    val canNavigateBack = backStack.size > 1
+
 
     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
         NavDisplay(
