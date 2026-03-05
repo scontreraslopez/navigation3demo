@@ -59,7 +59,6 @@ dependencies {
     implementation(libs.androidx.navigation3.ui)
 
     //Lifecycle (ViewModel)
-    val lifecycle_version = "2.10.0"
 
     // ViewModel
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
@@ -74,6 +73,7 @@ dependencies {
     // ViewModel integration with Navigation3. Esto es para viewmodels scopeados a la navegación, pero no lo vamos a usar en este ejemplo.
     implementation(libs.androidx.lifecycle.viewmodel.navigation3)
 
-    // KotlinX Serialization. No estoy seguro de si hará falta. //TODO: Review
+    implementation(libs.androidx.material3.adaptive.navigation3)
+    implementation(libs.kotlinx.serialization.core)
 
 }

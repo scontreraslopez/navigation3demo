@@ -7,15 +7,21 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import net.iessochoa.sergiocontreras.navigation3_demo.ui.navigation.EntryProviderDsl
 import net.iessochoa.sergiocontreras.navigation3_demo.ui.theme.Navigation3demoTheme
 
 @Composable
 fun Navigation3DemoApp() {
     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+        /*
         Text("Hello Navigation3Demo!",
             modifier = Modifier.padding(innerPadding))
+        */
+            EntryProviderDsl()
     }
 }
+
+// Aquí va el NavDisplay + backStack state
 
 @Preview(showBackground = true)
 @Composable
