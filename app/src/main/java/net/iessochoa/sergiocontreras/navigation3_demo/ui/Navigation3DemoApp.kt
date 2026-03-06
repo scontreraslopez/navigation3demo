@@ -27,6 +27,13 @@ import net.iessochoa.sergiocontreras.navigation3_demo.ui.navigation.TrainScreenD
 import net.iessochoa.sergiocontreras.navigation3_demo.ui.navigation.appNavGraph
 import net.iessochoa.sergiocontreras.navigation3_demo.ui.theme.Navigation3demoTheme
 
+/**
+ * La parte del TopAppBar es prácticamente igual que antes
+ * Lo que cambia es que ahora usamos un NavDisplay en lugar de un NavHost,
+ * y en lugar de NavController, ahora tenemos una backStack que es una lista mutable de destinos.
+ * El orquestador de la navegación es ahora el NavDisplay, que se encarga de mostrar el destino que está al final de la backStack, y de gestionar las transiciones entre destinos.
+ */
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun Navigation3DemoApp() {

@@ -2,6 +2,10 @@ package net.iessochoa.sergiocontreras.navigation3_demo.ui.navigation
 
 // sealed interface con todas las keys
 
+/**
+ * Esto es similar a lo que hacíamos antes
+ */
+
 sealed interface AppDestination
 
 data object MenuScreenDestination: AppDestination
